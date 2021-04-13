@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table-container {
+    height: 500px;
+    width: 1000px;
+    box-shadow: 1px 1px 5px rgb(182, 179, 179);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pagination-wrapper {
+    height: 47px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 13px;
+    line-height: normal;
+    border: 1px solid #babfc7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pagination-wrapper .pagination-utils {
+    text-align: center;
+    cursor: pointer;
+    min-width: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+.disabled {
+    color: grey;
+    cursor: text !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination-wrapper .pagination-info {
+    color: #181d1f;
+}
+
+.pagination-wrapper .pagination-info b {
+    font-weight: 700;
+    color: var(
+        --ag-secondary-foreground-color,
+        var(--ag-foreground-color, #181d1f)
+    );
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 49px);
+}
+
+#myGrid {
+    flex: 1 1 0px;
+    width: 100%;
+}
+
+.label {
+    color: #0f0f0f;
+}
+
+.value {
+    margin-right: 20px;
+    border: 1px solid lightgrey;
+    width: 50px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 2px;
+    background: #eee;
+}
+
+.mr-3 {
+    margin-right: 18px;
+}
+
+.pagination-input {
+    margin-right: auto;
+    margin-left: 20px;
+    border: 1px solid rgb(189, 184, 184);
+    padding: 5px;
 }
